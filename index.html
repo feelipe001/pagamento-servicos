@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialista em Marketing Digital e Branding Pessoal | Soluções Sob Medida</title>
+    <meta name="description" content="Transforme sua presença digital com serviços especializados em marketing e branding pessoal. Catálogo interativo com seleção de múltiplos serviços e pagamento via Kiwify.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0B0B;
+            color: #FFFFFF;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gold-accent {
+            color: #D4AF37;
+        }
+        .gold-border {
+            border-color: #D4AF37;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.1);
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .portrait-frame {
+            border: 2px solid #D4AF37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        input[type="checkbox"] {
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border: 2px solid #D4AF37;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+        }
+        input[type="checkbox"]:checked {
+            background-color: #D4AF37;
+        }
+        input[type="checkbox"]:checked::after {
+            content: "✓";
+            position: absolute;
+            color: #0B0B0B;
+            font-weight: bold;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center bg-black px-6 py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent z-0"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10 fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Todo RH tem esse problema. <span class="gold-accent">E eu posso te provar.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Desperte autoridade, otimize seu posicionamento e transforme sua presença digital com serviços sob medida.
+            </p>
+            <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })" 
+                    class="bg-transparent border-2 gold-border text-white px-8 py-4 text-lg font-medium rounded-md hover:bg-yellow-800 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
+                Ver meus serviços
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 px-6 bg-gray-900">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                     alt="Especialista em Marketing Digital" 
+                     class="portrait-frame w-64 h-64 md:w-80 md:h-80 object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500">
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    <span class="gold-accent">Sobre o Profissional</span>
+                </h2>
+                <p class="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+                    Sou especialista em marketing digital e branding pessoal para profissionais exigentes. Transformo perfis comuns em marcas que vendem confiança, atraem oportunidades e geram resultado.
+                </p>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+                    Aqui você escolhe exatamente o que precisa — e leva impacto real. Cada serviço foi cuidadosamente desenvolvido para resolver problemas específicos de posicionamento e visibilidade digital.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Catalog -->
+    <section id="services" class="py-20 px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                <span class="gold-accent">Catálogo de Serviços</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-900 rounded-lg p-6 border border-gray-800 transition-all duration-300 hover:border-yellow-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Edição MAX 9</h3>
+                        <span class="text-lg gold-accent font-medium">R$600,00</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Edição profissional de até 9 vídeos com identidade visual personalizada. Pronto para o feed e Reels que convertem.</p>
+                    <div class="flex justify-between items-center">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" class="service-checkbox" data-price="600">
+                            <span>Selecionar</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-900 rounded-lg p-6 border border-gray-800 transition-all duration-300 hover:border-yellow-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Vídeo Avulso</h3>
+                        <span class="text-lg gold-accent font-medium">R$120,00</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Precisa de um vídeo único? Entregamos com qualidade e agilidade, ideal para campanhas pontuais.</p>
+                    <div class="flex justify-between items-center">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" class="service-checkbox" data-price="120">
+                            <span>Selecionar</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-900 rounded-lg p-6 border border-gray-800 transition-all duration-300 hover:border-yellow-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Mentoria + Networking</h3>
+                        <span class="text-lg gold-accent font-medium">R$700,00</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Sessão estratégica + conexão com profissionais e oportunidades do seu nicho. Crescimento com direcionamento.</p>
+                    <div class="flex justify-between items-center">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" class="service-checkbox" data-price="700">
+                            <span>Selecionar</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-900 rounded-lg p-6 border border-gray-800 transition-all duration-300 hover:border-yellow-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Cobertura Mensal</h3>
+                        <span class="text-lg gold-accent font-medium">R$400,00</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Captação e entrega de conteúdo estratégico uma vez ao mês. Construa presença constante com qualidade.</p>
+                    <div class="flex justify-between items-center">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" class="service-checkbox" data-price="400">
+                            <span>Selecionar</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-gray-900 rounded-lg p-6 border border-gray-800 transition-all duration-300 hover:border-yellow-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Cronograma de Stories</h3>
+                        <span class="text-lg gold-accent font-medium">R$120,00</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Planejamento inteligente para seus stories com foco em engajamento, autoridade e venda.</p>
+                    <div class="flex justify-between items-center">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" class="service-checkbox" data-price="120">
+                            <span>Selecionar</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-gray-900 rounded-lg p-6 border border-gray-800 transition-all duration-300 hover:border-yellow-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Análise de Perfil</h3>
+                        <span class="text-lg gold-accent font-medium">R$25,00</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Avaliação precisa do seu perfil e recomendações práticas para gerar impacto instantâneo.</p>
+                    <div class="flex justify-between items-center">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" class="service-checkbox" data-price="25">
+                            <span>Selecionar</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="service-card bg-gray-900 rounded-lg p-6 border border-gray-800 transition-all duration-300 hover:border-yellow-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Tráfego Pago</h3>
+                        <span class="text-lg gold-accent font-medium">R$750,00</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Campanhas no Meta Ads para acelerar resultados com inteligência e segmentação precisa.</p>
+                    <div class="flex justify-between items-center">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" class="service-checkbox" data-price="750">
+                            <span>Selecionar</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="service-card bg-gray-900 rounded-lg p-6 border border-gray-800 transition-all duration-300 hover:border-yellow-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Ensaio IA Realista</h3>
+                        <span class="text-lg gold-accent font-medium">R$250,00</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Retratos profissionais gerados por IA com estética real, moderna e marcante.</p>
+                    <div class="flex justify-between items-center">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" class="service-checkbox" data-price="250">
+                            <span>Selecionar</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Service 9 -->
+                <div class="service-card bg-gray-900 rounded-lg p-6 border border-gray-800 transition-all duration-300 hover:border-yellow-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Posts e Carrossel (3/semana)</h3>
+                        <span class="text-lg gold-accent font-medium">R$200,00</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Conteúdo constante, visual e com copy persuasiva para alimentar e crescer seu perfil.</p>
+                    <div class="flex justify-between items-center">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" class="service-checkbox" data-price="200">
+                            <span>Selecionar</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Service 10 -->
+                <div class="service-card bg-gray-900 rounded-lg p-6 border border-gray-800 transition-all duration-300 hover:border-yellow-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold">Landing Page</h3>
+                        <span class="text-lg gold-accent font-medium">R$750,00</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Página única com foco total em conversão, ideal para campanhas ou produtos digitais.</p>
+                    <div class="flex justify-between items-center">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" class="service-checkbox" data-price="750">
+                            <span>Selecionar</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Total and Checkout -->
+            <div class="bg-gray-900 rounded-lg p-6 border border-gray-800 mt-8 max-w-2xl mx-auto">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-bold">Total Selecionado</h3>
+                    <div class="text-2xl gold-accent font-bold" id="total-amount">R$0,00</div>
+                </div>
+                <a href="https://kiwify.com.br" id="checkout-button" class="block w-full bg-yellow-600 hover:bg-yellow-700 text-black font-bold py-4 px-6 rounded-md text-center transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    Finalizar e Pagar na Kiwify
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 px-6 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                <span class="gold-accent">Depoimentos</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                    <div class="text-yellow-500 text-4xl mb-4">"</div>
+                    <p class="text-gray-300 mb-6">Transformou completamente meu LinkedIn. Em 3 meses, tripliquei minhas conexões qualificadas e recebi 5 propostas de trabalho.</p>
+                    <p class="font-bold">— Ana Clara, RH Executivo</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                    <div class="text-yellow-500 text-4xl mb-4">"</div>
+                    <p class="text-gray-300 mb-6">A mentoria foi o divisor de águas na minha carreira. Aprendi a me posicionar como especialista e hoje tenho fila de clientes.</p>
+                    <p class="font-bold">— Ricardo, Consultor Financeiro</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                    <div class="text-yellow-500 text-4xl mb-4">"</div>
+                    <p class="text-gray-300 mb-6">Os vídeos editados profissionalmente elevaram meu engajamento em 300%. Vale cada centavo investido.</p>
+                    <p class="font-bold">— Juliana, Empreendedora</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="py-20 px-6 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                <span class="gold-accent">Contato e Redes Sociais</span>
+            </h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">Me encontre nas redes</h3>
+                    <div class="flex space-x-6 mb-8">
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors duration-300 text-3xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors duration-300 text-3xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors duration-300 text-3xl">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-6">Ou envie uma mensagem</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-2">Nome</label>
+                            <input type="text" id="name" class="w-full bg-gray-900 border border-gray-800 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-600">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2">E-mail</label>
+                            <input type="email" id="email" class="w-full bg-gray-900 border border-gray-800 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-600">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full bg-gray-900 border border-gray-800 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-600"></textarea>
+                        </div>
+                        <button type="submit" class="bg-yellow-600 hover:bg-yellow-700 text-black font-bold py-3 px-6 rounded-md transition-all duration-300">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2 flex items-center justify-center">
+                    <div class="bg-gray-900 p-8 rounded-lg border border-gray-800 w-full max-w-md">
+                        <h3 class="text-2xl font-bold mb-4">Pronto para transformar sua presença digital?</h3>
+                        <p class="text-gray-400 mb-6">Agende uma consultoria inicial gratuita de 30 minutos para discutir suas necessidades específicas.</p>
+                        <button class="w-full bg-transparent border-2 gold-border text-white py-3 px-6 rounded-md hover:bg-yellow-800 hover:bg-opacity-20 transition-all duration-300">
+                            Agendar Consultoria
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold gold-accent">Branding Expert</h3>
+                    <p class="text-gray-400 mt-2">Marketing Digital & Branding Pessoal</p>
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors duration-300">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+                
+                <div class="text-gray-500 text-sm">
+                    <p>CNPJ: 12.345.678/0001-99</p>
+                    <p class="mt-1">© 2023 Branding Expert. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.service-checkbox');
+            const totalAmountElement = document.getElementById('total-amount');
+            const checkoutButton = document.getElementById('checkout-button');
+            
+            let total = 0;
+            let selectedServices = [];
+            
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const price = parseInt(this.dataset.price);
+                    
+                    if (this.checked) {
+                        total += price;
+                        selectedServices.push(price);
+                    } else {
+                        total -= price;
+                        selectedServices = selectedServices.filter(item => item !== price);
+                    }
+                    
+                    // Update total display
+                    totalAmountElement.textContent = `R$${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+                    
+                    // Enable/disable checkout button
+                    if (total > 0) {
+                        checkoutButton.removeAttribute('disabled');
+                        
+                        // Update Kiwify link with selected services (simplified example)
+                        checkoutButton.href = `https://kiwify.com.br?total=${total}&services=${selectedServices.join(',')}`;
+                    } else {
+                        checkoutButton.setAttribute('disabled', 'disabled');
+                        checkoutButton.href = '#';
+                    }
+                });
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
