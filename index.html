@@ -394,53 +394,49 @@ Sou movido por inovação, estética e performance — e acredito que toda ideia
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const checkboxes = document.querySelectorAll('.service-checkbox');
-            const totalAmountElement = document.getElementById('total-amount');
-            const checkoutButton = document.getElementById('checkout-button');
-            
-            let total = 0;
-            let selectedServices = [];
-            
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', function() {
-                    const price = parseInt(this.dataset.price);
-                    
-                    if (this.checked) {
-                        total += price;
-                        selectedServices.push(price);
-                    } else {
-                        total -= price;
-                        selectedServices = selectedServices.filter(item => item !== price);
-                    }
-                    
-                    // Update total display
-                    totalAmountElement.textContent = `R$${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
-                    
-                    // Enable/disable checkout button
-                    if (total > 0) {
-                        checkoutButton.removeAttribute('disabled');
-                        
-                        // Update Kiwify link with selected services (simplified example)
-                        checkoutButton.href = `https://kiwify.com.br?total=${total}&services=${selectedServices.join(',')}`;
-                    } else {
-                        checkoutButton.setAttribute('disabled', 'disabled');
-                        checkoutButton.href = '#';
-                    }
-                });
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkboxes = document.querySelectorAll('.service-checkbox');
+        const totalAmountElement = document.getElementById('total-amount');
+        const checkoutButton = document.getElementById('checkout-button');
+
+        let total = 0;
+
+        function atualizarMensagemWhatsApp() {
+            let mensagem = "Olá! Gostaria de contratar os seguintes serviços:\n\n";
+            total = 0;
+
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    const nome = cb.closest('.service-card').querySelector('h3').innerText;
+                    const valor = parseInt(cb.dataset.price);
+                    mensagem += `- ${nome}: R$${valor},00\n`;
+                    total += valor;
+                }
             });
-            
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
+
+            if (total === 0) {
+                checkoutButton.setAttribute('disabled', 'disabled');
+                checkoutButton.href = "#";
+                totalAmountElement.textContent = "R$0,00";
+                return;
+            }
+
+            mensagem += `\nTotal: R$${total},00\n\nPodemos finalizar? 😊`;
+
+            const numero = "12991599185";
+            const url = `https://wa.me/55${numero}?text=${encodeURIComponent(mensagem)}`;
+
+            checkoutButton.removeAttribute('disabled');
+            checkoutButton.href = url;
+            totalAmountElement.textContent = `R$${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+        }
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', atualizarMensagemWhatsApp);
         });
-    </script>
+
+        atualizarMensagemWhatsApp(); // inicializa
+    });
+</script>
 </body>
 </html>
